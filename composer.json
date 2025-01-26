@@ -1,0 +1,19 @@
+{
+    "name": "yireo/magento2-loki-checkout-multi-safepay",
+    "version": "0.0.1",
+    "description": "N/A",
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "^103.0",
+        "yireo/magento2-loki-checkout": "~0.0.5"
+    },
+    "license": "OSL-3.0",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Yireo\\LokiCheckoutMultiSafepay\\": ""
+        }
+    }
+}
