@@ -4,7 +4,7 @@
         <sequence>
             <module name="Yireo_LokiCheckout"/>
             <module name="MultiSafepay_ConnectCore"/>
-            <module name="MultiSafepay_ConnectAdminHtml"/>
+            <module name="MultiSafepay_ConnectAdminhtml"/>
         </sequence>
     </module>
 </config>
