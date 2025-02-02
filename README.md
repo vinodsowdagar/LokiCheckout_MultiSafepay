@@ -13,5 +13,6 @@ composer require yireo/magento2-loki-checkout-multi-safepay
 Next, enable this module:
 ```bash
 bin/magento module:enable Yireo_LokiCheckoutMultiSafepay
+bin/magento setup:upgrade
 ```
 
