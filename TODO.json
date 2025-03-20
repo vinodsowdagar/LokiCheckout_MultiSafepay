@@ -1,54 +1,182 @@
 {
-  "module": {
-    "Module Setup": "complete",
-    "Payment logos": "pending",
-    "Intended functionality": "draft"
-  },
-  "payment_methods": {
-    "iDEAL": "pending",
-    "Bancontact": "pending",
-    "MyBank": "pending",
-    "Belfius": "pending",
-    "SOFORT": "pending",
-    "Bank Transfer": "pending",
-    "Trustly": "pending",
-    "EPS": "pending",
-    "KBC/CBC": "pending",
-    "MB WAY": "pending",
-    "Multibanco": "pending",
-    "Cartes Bancaires": "pending",
-    "Bizum": "pending",
-    "Giropay": "pending",
-
-    "Visa": "pending",
-    "Visa Debit": "pending",
-    "Mastercard": "pending",
-    "American Express": "pending",
-    "SEPA Direct Debit": "pending",
-    "PostePay": "pending",
-    "Zinia": "pending",
-    "Dankort": "pending",
-    "Paysafecard": "pending",
-
-    "Giftcard": "pending",
-    "Monizze": "pending",
-    "Sodexo": "pending",
-    "Edenred": "pending",
-
-    "Riverty": "pending",
-    "Klarna": "pending",
-    "in3": "pending",
-    "Request to Pay": "pending",
-
-    "PayPal": "pending",
-    "Apple Pay": "pending",
-    "Amazon pay": "pending",
-    "Alipay": "pending",
-    "Pay in Installments": "pending",
-    "Pay After Delivery": "pending",
-    "E-invoicing": "pending",
-    "TrustPay": "pending",
-    "WeChat Pay": "pending",
-    "Click to Pay": "pending"
-  }
+    "module": {
+        "Module Setup": {
+            "version": "1.0",
+            "status": "complete"
+        },
+        "Payment logos": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Intended functionality": {
+            "version": "1.0",
+            "status": "draft"
+        }
+    },
+    "payment_methods": {
+        "iDEAL": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Bancontact": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "MyBank": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Belfius": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "SOFORT": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Bank Transfer": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Trustly": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "EPS": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "KBC\/CBC": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "MB WAY": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Multibanco": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Cartes Bancaires": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Bizum": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Giropay": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Visa": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Visa Debit": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Mastercard": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "American Express": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "SEPA Direct Debit": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "PostePay": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Zinia": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Dankort": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Paysafecard": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Giftcard": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Monizze": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Sodexo": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Edenred": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Riverty": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Klarna": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "in3": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Request to Pay": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "PayPal": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Apple Pay": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Amazon pay": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Alipay": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Pay in Installments": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Pay After Delivery": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "E-invoicing": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "TrustPay": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "WeChat Pay": {
+            "version": "1.0",
+            "status": "pending"
+        },
+        "Click to Pay": {
+            "version": "1.0",
+            "status": "pending"
+        }
+    }
 }
