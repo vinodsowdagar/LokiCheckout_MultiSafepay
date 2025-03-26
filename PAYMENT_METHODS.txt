@@ -1,0 +1,41 @@
+Alipay
+Amazon pay
+American Express
+Apple Pay
+Bancontact
+Bank Transfer
+Belfius
+Bizum
+Cartes Bancaires
+Click to Pay
+Dankort
+E-invoicing
+EPS
+Edenred
+Giftcard
+Giropay
+KBC/CBC
+Klarna
+MB WAY
+Mastercard
+Monizze
+Multibanco
+MyBank
+Pay After Delivery
+Pay in Installments
+PayPal
+Paysafecard
+PostePay
+Request to Pay
+Riverty
+SEPA Direct Debit
+SOFORT
+Sodexo
+TrustPay
+Trustly
+Visa
+Visa Debit
+WeChat Pay
+Zinia
+iDEAL
+in3
