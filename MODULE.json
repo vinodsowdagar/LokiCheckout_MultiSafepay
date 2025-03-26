@@ -1,0 +1,9 @@
+{
+    "modules": [
+        "Yireo_LokiCheckout",
+        "MultiSafepay_ConnectCore",
+        "MultiSafepay_ConnectAdminhtml"
+    ],
+    "components": [],
+    "config": []
+}
