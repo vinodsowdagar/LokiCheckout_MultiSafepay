@@ -24,6 +24,8 @@ class IconResolver implements IconResolverInterface
             return false;
         }
 
-        return '';
+        $imageId = 'MultiSafepay_ConnectCore::images/'.$paymentMethodCode.'.png';
+        $imageUrl = $iconResolverContext->getViewFileUrl($imageId);
+        return '<img src="'.$imageUrl.'" />';
     }
 }
