@@ -7,4 +7,12 @@
             </argument>
         </arguments>
     </type>
+
+    <type name="Yireo\LokiCheckout\Payment\Redirect\RedirectResolverListing">
+        <arguments>
+            <argument name="redirectResolvers" xsi:type="array">
+                <item name="multisafepay" xsi:type="object">Yireo\LokiCheckoutMultiSafepay\Payment\Redirect\RedirectResolver</item>
+            </argument>
+        </arguments>
+    </type>
 </config>
