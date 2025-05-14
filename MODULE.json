@@ -1,8 +1,9 @@
 {
     "modules": [
         "Yireo_LokiCheckout",
-        "MultiSafepay_ConnectCore",
-        "MultiSafepay_ConnectAdminhtml"
+        "Magento_Quote",
+        "Magento_Store",
+        "MultiSafepay_ConnectCore"
     ],
     "components": [],
     "config": [],
