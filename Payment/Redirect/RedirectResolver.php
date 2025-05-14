@@ -2,7 +2,7 @@
 
 namespace Yireo\LokiCheckoutMultiSafepay\Payment\Redirect;
 
-use MultiSafepay\ConnectCore\Model\Method\GenericAdapter;
+use Magento\Payment\Model\Method\Adapter;
 use MultiSafepay\ConnectCore\Service\PaymentLink;
 use Yireo\LokiCheckout\Payment\Redirect\RedirectResolverInterface;
 use Yireo\LokiCheckout\Step\FinalStep\RedirectContext;
@@ -17,7 +17,8 @@ class RedirectResolver implements RedirectResolverInterface
     public function resolve(RedirectContext $redirectContext): false|string
     {
         $paymentMethod = $redirectContext->getPaymentMethod();
-        if (false === $paymentMethod instanceof GenericAdapter) {
+        /** @var Adapter $paymentMethod */
+        if (false === str_starts_with($paymentMethod->getCode(), 'multisafepay_')) {
             return false;
         }
 
