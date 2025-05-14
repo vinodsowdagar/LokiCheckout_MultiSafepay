@@ -6,9 +6,10 @@
     "type": "magento2-module",
     "require": {
         "magento/framework": "^103.0",
+        "magento/module-quote": "^101.0",
         "multisafepay/magento2-core": "^3.9",
-        "multisafepay/magento2-adminhtml": "*",
-        "yireo/magento2-loki-checkout": "~0.0 | ^1.0"
+        "yireo/magento2-loki-checkout": "~0.0 | ^1.0",
+        "ext-pcre": "*"
     },
     "license": "OSL-3.0",
     "autoload": {
