@@ -10,6 +10,7 @@ class HideDefaultPaymentMethod
     public function afterGetList(PaymentMethodManagementInterface $subject, $result, $cartId): array
     {
         return array_filter($result, function ($method) {
+            return true;
             return $method->getCode() !== 'multisafepay';
         });
     }
