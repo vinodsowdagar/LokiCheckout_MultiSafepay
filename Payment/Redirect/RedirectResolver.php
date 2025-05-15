@@ -18,7 +18,7 @@ class RedirectResolver implements RedirectResolverInterface
     {
         $paymentMethod = $redirectContext->getPaymentMethod();
         /** @var Adapter $paymentMethod */
-        if (false === str_starts_with($paymentMethod->getCode(), 'multisafepay_')) {
+        if (false === str_starts_with($paymentMethod->getCode(), 'multisafepay')) {
             return false;
         }
 
