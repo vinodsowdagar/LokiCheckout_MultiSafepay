@@ -11,6 +11,10 @@
         "yireo/magento2-loki-checkout": "~0.0 | ^1.0",
         "ext-pcre": "*"
     },
+    "suggest": {
+        "multisafepay/magento2-frontend": "You probably want the frontend module",
+        "multisafepay/magento2-adminhtml": "You probably want the admin module"
+    },
     "license": "OSL-3.0",
     "autoload": {
         "files": [
