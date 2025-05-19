@@ -6,5 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.2] - 19 May 2025
+### Fixed
+- Add Payment Components where needed
+- Do not hide "multisafepay"
+- Redirect also method "multisafepay"
+- Add initial tests
+
 ## [0.0.1] - 14 May 2025
 - Initial release
