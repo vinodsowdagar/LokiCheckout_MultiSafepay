@@ -1,0 +1,15 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+use Yireo\LokiComponents\Util\Block\CssClass;
+use Yireo\LokiCheckoutMollie\Component\Checkout\Payment\Method\Creditcard\CreditcardViewModel;
+
+/** @var CreditcardViewModel $viewModel */
+/** @var Template $block */
+/** @var CssClass $css */
+
+?>
+<div class="<?= $css('') ?>" data-gateway-id="<?= $block->getGatewayId() ?>">
+    <div id="<?= $viewModel->getElementId() ?>-container"></div>
+</div>

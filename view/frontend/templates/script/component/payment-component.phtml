@@ -1,0 +1,87 @@
+<script>
+    let PaymentComponent;
+
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('LokiCheckoutPaymentComponent', () => ({
+            ...LokiCheckoutComponentType,
+            environment: '',
+            apiToken: '',
+            currency: '',
+            amount: 0,
+            locale: '',
+            countryId: '',
+            initMultisafepay() {
+                if (MultiSafepay === undefined) {
+                    return;
+                }
+
+                PaymentComponent = new MultiSafepay({
+                    env: this.environment,
+                    apiToken: this.apiToken,
+                    order: {
+                        currency: this.currency,
+                        amount: this.amount,
+                        template: {
+                            settings: {
+                                embed_mode: true
+                            },
+                            merge: true
+                        },
+                        customer: {
+                            locale: this.locale,
+                            country: this.countryId
+                        }
+                    }
+                });
+
+                PaymentComponent.init('payment', {
+                    elementId: this.$root.id,
+                    container: '#' + this.$root.id + '-container',
+                    gateway: this.$root.getAttribute('data-gateway-id'),
+                    onLoad() {
+                        const component = Alpine.store('components').getComponentByElementId(this.elementId);
+                        component.setValid(false);
+                    },
+                    onValidation: (state) => {
+                        if (true !== state.valid) {
+                            return;
+                        }
+
+                        const component = Alpine.store('components').getComponentByElementId(this.elementId);
+                        if (PaymentComponent.hasErrors()) {
+                            component.setValid(false);
+                            return false;
+                        }
+
+                        component.setValid(true);
+                    }
+                });
+            },
+            async beforePostNextStep() {
+                const paymentData = await PaymentComponent.getPaymentData();
+
+                if (PaymentComponent.hasErrors()) {
+                    PaymentComponent.getErrors().errors.forEach(error => {
+                        Alpine.store('components').get('LokiComponentsGlobalMessages').addError(error.message);
+                    });
+
+                    const component = Alpine.store('components').getComponentByElementId(this.elementId);
+                    component.setValid(false);
+
+                    return false;
+                }
+
+                this.post({
+                    payload: paymentData.payload,
+                    tokenize: paymentData.tokenize ?? false
+                });
+            }
+        }));
+    });
+</script>
+
+<style>
+    .msp-ui-form-control {
+        border-radius: 5px
+    }
+</style>

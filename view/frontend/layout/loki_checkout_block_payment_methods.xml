@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <body>
+        <block
+            name="loki-checkout.payment.payment-methods.multisafepay_amex.form"
+            template="Yireo_LokiCheckoutMultiSafepay::checkout/payment/method/payment-component.phtml">
+            <arguments>
+                <argument name="gateway_id" xsi:type="string">CREDITCARD</argument>
+            </arguments>
+        </block>
+    </body>
+</page>

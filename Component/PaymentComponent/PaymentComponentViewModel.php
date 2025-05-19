@@ -1,0 +1,41 @@
+<?php declare(strict_types=1);
+
+namespace Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent;
+
+use Yireo\LokiCheckout\Component\Base\Generic\CheckoutViewModel;
+
+/**
+ * @method PaymentComponentContext getContext()
+ */
+class PaymentComponentViewModel extends CheckoutViewModel
+{
+    public function getJsComponentName(): ?string
+    {
+        return 'LokiCheckoutPaymentComponent';
+    }
+
+    public function isValid(): bool
+    {
+        return false;
+    }
+
+    public function isDisabled(): bool
+    {
+        return true;
+    }
+
+    public function getJsData(): array
+    {
+        return [
+            ...parent::getJsData(),
+            'environment' => $this->getContext()->getEnvironment(),
+            'apiToken' => $this->getContext()->getApiToken(),
+            'currency' => $this->getContext()->getCurrency(),
+            'amount' => $this->getContext()->getAmount(),
+            'customer' => [
+                'locale' => $this->getContext()->getCurrency(),
+                'country' => $this->getContext()->getCountryId(),
+            ],
+        ];
+    }
+}

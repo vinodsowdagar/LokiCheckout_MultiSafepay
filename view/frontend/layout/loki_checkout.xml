@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="head.additional">
+            <block template="Yireo_LokiCheckoutMultiSafepay::stylesheet/payment-components.phtml"/>
+        </referenceBlock>
+
+        <referenceContainer name="before.body.end">
+            <block template="Yireo_LokiCheckoutMultiSafepay::script/payment-component-loader.phtml"/>
+        </referenceContainer>
+
+        <referenceContainer name="loki-components">
+            <block template="Yireo_LokiCheckoutMultiSafepay::script/component/payment-component.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
