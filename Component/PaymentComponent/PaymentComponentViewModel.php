@@ -14,6 +14,22 @@ class PaymentComponentViewModel extends CheckoutViewModel
         return 'LokiCheckoutPaymentComponent';
     }
 
+    public function isAllowRendering(): bool
+    {
+        $paymentMethod = (string)$this->getBlock()->getMethod();
+        if (empty($paymentMethod)) {
+            return parent::isAllowRendering();
+        }
+
+        $path = 'payment/'.$paymentMethod.'/payment_type';
+        if ($this->getContext()->getConfigValue($path) !== 'payment_component') {
+            return parent::isAllowRendering();
+        }
+
+        return true;
+
+    }
+
     public function isValid(): bool
     {
         return false;
@@ -37,5 +53,11 @@ class PaymentComponentViewModel extends CheckoutViewModel
                 'country' => $this->getContext()->getCountryId(),
             ],
         ];
+    }
+
+    public function getGatewayCode(): string
+    {
+        $paymentMethod = (string)$this->getBlock()->getMethod();
+        return (string)$this->getContext()->getConfigValue('payment/'.$paymentMethod.'/gateway_code');
     }
 }

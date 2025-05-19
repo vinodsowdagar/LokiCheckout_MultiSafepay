@@ -3,10 +3,34 @@
     <body>
         <block
             name="loki-checkout.payment.payment-methods.multisafepay_amex.form"
-            template="Yireo_LokiCheckoutMultiSafepay::checkout/payment/method/payment-component.phtml">
-            <arguments>
-                <argument name="gateway_id" xsi:type="string">CREDITCARD</argument>
-            </arguments>
-        </block>
+            template="Yireo_LokiCheckoutMultiSafepay::checkout/payment/method/payment-component.phtml"/>
+
+        <block
+            name="loki-checkout.payment.payment-methods.multisafepay_creditcard.form"
+            template="Yireo_LokiCheckoutMultiSafepay::checkout/payment/method/payment-component.phtml"/>
+
+        <block
+            name="loki-checkout.payment.payment-methods.multisafepay_maestro.form"
+            template="Yireo_LokiCheckoutMultiSafepay::checkout/payment/method/payment-component.phtml"/>
+
+        <block
+            name="loki-checkout.payment.payment-methods.multisafepay_mastercard.form"
+            template="Yireo_LokiCheckoutMultiSafepay::checkout/payment/method/payment-component.phtml"/>
+
+        <block
+            name="loki-checkout.payment.payment-methods.multisafepay_in3.form"
+            template="Yireo_LokiCheckoutMultiSafepay::checkout/payment/method/payment-component.phtml"/>
+
+        <block
+            name="loki-checkout.payment.payment-methods.multisafepay_in3b2b.form"
+            template="Yireo_LokiCheckoutMultiSafepay::checkout/payment/method/payment-component.phtml"/>
+
+        <block
+            name="loki-checkout.payment.payment-methods.multisafepay_billink.form"
+            template="Yireo_LokiCheckoutMultiSafepay::checkout/payment/method/payment-component.phtml"/>
+
+        <block
+            name="loki-checkout.payment.payment-methods.multisafepay_einvoicing.form"
+            template="Yireo_LokiCheckoutMultiSafepay::checkout/payment/method/payment-component.phtml"/>
     </body>
 </page>

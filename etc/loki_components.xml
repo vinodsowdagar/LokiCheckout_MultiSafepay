@@ -6,4 +6,52 @@
         viewModel="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentViewModel"
         repository="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentRepository"
     />
+
+    <component
+        name="loki-checkout.payment.payment-methods.multisafepay_creditcard.form"
+        context="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentContext"
+        viewModel="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentViewModel"
+        repository="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentRepository"
+    />
+
+    <component
+        name="loki-checkout.payment.payment-methods.multisafepay_maestro.form"
+        context="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentContext"
+        viewModel="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentViewModel"
+        repository="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentRepository"
+    />
+
+    <component
+        name="loki-checkout.payment.payment-methods.multisafepay_mastercard.form"
+        context="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentContext"
+        viewModel="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentViewModel"
+        repository="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentRepository"
+    />
+
+    <component
+        name="loki-checkout.payment.payment-methods.multisafepay_in3.form"
+        context="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentContext"
+        viewModel="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentViewModel"
+        repository="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentRepository"
+    />
+
+    <component
+        name="loki-checkout.payment.payment-methods.multisafepay_in3b2b.form"
+        context="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentContext"
+        viewModel="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentViewModel"
+        repository="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentRepository"
+    />
+    <component
+        name="loki-checkout.payment.payment-methods.multisafepay_billink.form"
+        context="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentContext"
+        viewModel="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentViewModel"
+        repository="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentRepository"
+    />
+
+    <component
+        name="loki-checkout.payment.payment-methods.multisafepay_einvoicing.form"
+        context="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentContext"
+        viewModel="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentViewModel"
+        repository="Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentRepository"
+    />
 </components>

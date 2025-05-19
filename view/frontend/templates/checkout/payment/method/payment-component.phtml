@@ -2,14 +2,14 @@
 declare(strict_types=1);
 
 use Magento\Framework\View\Element\Template;
+use Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent\PaymentComponentViewModel;
 use Yireo\LokiComponents\Util\Block\CssClass;
-use Yireo\LokiCheckoutMollie\Component\Checkout\Payment\Method\Creditcard\CreditcardViewModel;
 
-/** @var CreditcardViewModel $viewModel */
+/** @var PaymentComponentViewModel $viewModel */
 /** @var Template $block */
 /** @var CssClass $css */
-
+$gatewayCode = $viewModel->getGatewayCode();
 ?>
-<div class="<?= $css('') ?>" data-gateway-id="<?= $block->getGatewayId() ?>">
+<div class="<?= $css('') ?>" data-gateway-id="<?= $gatewayCode ?>">
     <div id="<?= $viewModel->getElementId() ?>-container"></div>
 </div>

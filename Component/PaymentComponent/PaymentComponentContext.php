@@ -2,6 +2,7 @@
 
 namespace Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent;
 
+use Magento\Framework\App\Config\ScopeConfigInterface;
 use Yireo\LokiCheckout\Util\Component\StepProvider;
 use Yireo\LokiCheckout\ViewModel\CheckoutState;
 use Yireo\LokiCheckout\ViewModel\CurrentStore;
@@ -16,7 +17,8 @@ class PaymentComponentContext implements  ComponentContextInterface
         private CheckoutState $checkoutState,
         private ApiTokenUtil $apiTokenUtil,
         private Config $config,
-        private StepProvider $stepProvider
+        private StepProvider $stepProvider,
+        private ScopeConfigInterface $scopeConfig,
     ) {
     }
 
@@ -59,5 +61,10 @@ class PaymentComponentContext implements  ComponentContextInterface
     public function getStepProvider(): StepProvider
     {
         return $this->stepProvider;
+    }
+
+    public function getConfigValue(string $path): mixed
+    {
+        return $this->scopeConfig->getValue($path);
     }
 }
