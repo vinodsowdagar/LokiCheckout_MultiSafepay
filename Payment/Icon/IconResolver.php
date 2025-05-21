@@ -2,7 +2,9 @@
 
 namespace Yireo\LokiCheckoutMultiSafepay\Payment\Icon;
 
+use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\Module\Manager as ModuleManager;
+use MultiSafepay\ConnectCore\Util\GenericGatewayUtil;
 use Yireo\LokiCheckout\Payment\Icon\IconResolverContext;
 use Yireo\LokiCheckout\Payment\Icon\IconResolverInterface;
 use Yireo\LokiCheckout\ViewModel\CheckoutState;
@@ -12,6 +14,8 @@ class IconResolver implements IconResolverInterface
     public function __construct(
         private ModuleManager $moduleManager,
         private CheckoutState $checkoutState,
+        private GenericGatewayUtil $genericGatewayUtil,
+        private string $imageTag = '<img src="%s" />',
     ) {
     }
 
@@ -26,14 +30,52 @@ class IconResolver implements IconResolverInterface
             return false;
         }
 
-        $countryId = strtolower($this->checkoutState->getQuote()->getBillingAddress()->getCountryId());
-        $imageId = 'MultiSafepay_ConnectCore::images/'.$paymentMethodCode.'-'.$countryId.'.png';
-        if (false === $iconResolverContext->isValidViewFileUrl($imageId)) {
-            $imageId = 'MultiSafepay_ConnectCore::images/'.$paymentMethodCode.'.png';
+        $gatewayImageUrl = $this->getGatewayImageUrl($iconResolverContext);
+        if (!empty($gatewayImageUrl)) {
+            return str_replace('%s', $gatewayImageUrl, $this->imageTag);
+        }
+
+
+        $imageId = $this->getImageId($iconResolverContext);
+        if (empty($imageId)) {
+            return '';
         }
 
         $imageUrl = $iconResolverContext->getViewFileUrl($imageId);
 
-        return '<img src="'.$imageUrl.'" />';
+        return str_replace('%s', $imageUrl, $this->imageTag);
+    }
+
+    private function getImageId(IconResolverContext $iconResolverContext): string|false
+    {
+        $paymentMethodCode = $iconResolverContext->getPaymentMethodCode();
+
+        $countryId = strtolower($this->checkoutState->getQuote()->getBillingAddress()->getCountryId());
+        $imageId = 'MultiSafepay_ConnectCore::images/'.$paymentMethodCode.'-'.$countryId.'.png';
+        if ($this->isValidImageId($iconResolverContext, $imageId)) {
+            return $imageId;
+        }
+
+        $imageId = 'MultiSafepay_ConnectCore::images/'.$paymentMethodCode.'.png';
+        if ($this->isValidImageId($iconResolverContext, $imageId)) {
+            return $imageId;
+        }
+
+        return false;
+    }
+
+    private function isValidImageId(IconResolverContext $iconResolverContext, string|false $imageId): bool
+    {
+        if (false === $imageId || empty($imageId)) {
+            return false;
+        }
+
+        return $iconResolverContext->isValidViewFileUrl($imageId);
+    }
+
+    private function getGatewayImageUrl(IconResolverContext $iconResolverContext): string|false
+    {
+        $paymentMethodCode = $iconResolverContext->getPaymentMethodCode();
+        return $this->genericGatewayUtil->getGenericFullImagePath($paymentMethodCode);
     }
 }
