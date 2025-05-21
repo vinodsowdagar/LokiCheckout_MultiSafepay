@@ -1,0 +1,27 @@
+import {PaymentMethod, PlaceOrderButton} from '@helpers/checkout-objects';
+import {setupCheckout} from '@helpers/setup-checkout';
+import {test} from '@playwright/test';
+
+import {MultiSafepay} from './helpers/multisafepay-objects';
+import multiSafepayConfig from './config/config';
+
+test.describe('iDeal payment test', () => {
+    test('should allow me to go to the checkout', async ({page, context}) => {
+        await setupCheckout(page, context, {
+            ...multiSafepayConfig,
+            config: {
+                ...multiSafepayConfig.config,
+                'payment/multisafepay_ideal/active': 1,
+            }
+        });
+
+        const paymentMethod = new PaymentMethod(page, 'multisafepay_ideal');
+        await paymentMethod.select();
+
+        const placeOrderButton = new PlaceOrderButton(page);
+        await placeOrderButton.click();
+
+        const molliePortal = new MultiSafepay(page);
+        await molliePortal.expectTestIdealPage();
+    });
+});

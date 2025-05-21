@@ -9,15 +9,16 @@ export class MultiSafepay {
     }
 
     async expectTestPaymentPage() {
-        await expect(this.page).toHaveURL(/www.multisafepay.com\/checkout/, {timeout: 5000});
+        await expect(this.page).toHaveURL(/testpayv2.multisafepay.com/, {timeout: 5000});
 
         const body = await this.page.locator('body');
-        await expect(body).toHaveText(/Note: this is a testmode payment/);    }
+        await expect(body).toHaveText(/Test shop/);
+    }
 
-    async expectIssuerPage() {
-        await expect(this.page).toHaveURL(/www.multisafepay.com\/checkout/, {timeout: 5000});
+    async expectTestIdealPage() {
+        await expect(this.page).toHaveURL(/testpay.multisafepay.com\/sim\/ideal2/, {timeout: 5000});
 
         const body = await this.page.locator('body');
-        await expect(body).toHaveText(/Note: this is a testmode payment/);
+        await expect(body).toHaveText(/Test Scenario/);
     }
 }
