@@ -2,8 +2,8 @@
 
 namespace Yireo\LokiCheckoutMultiSafepay\Payment\Icon;
 
-use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\Module\Manager as ModuleManager;
+use MultiSafepay\ConnectCore\Model\Ui\Gateway\CreditCardConfigProvider;
 use MultiSafepay\ConnectCore\Util\GenericGatewayUtil;
 use Yireo\LokiCheckout\Payment\Icon\IconResolverContext;
 use Yireo\LokiCheckout\Payment\Icon\IconResolverInterface;
@@ -15,6 +15,7 @@ class IconResolver implements IconResolverInterface
         private ModuleManager $moduleManager,
         private CheckoutState $checkoutState,
         private GenericGatewayUtil $genericGatewayUtil,
+        private CreditCardConfigProvider $creditCardConfigProvider,
         private string $imageTag = '<img src="%s" />',
     ) {
     }
@@ -35,6 +36,10 @@ class IconResolver implements IconResolverInterface
             return str_replace('%s', $gatewayImageUrl, $this->imageTag);
         }
 
+        $creditcardImageUrl = $this->getCreditcardImageUrl($iconResolverContext);
+        if (!empty($creditcardImageUrl)) {
+            return str_replace('%s', $creditcardImageUrl, $this->imageTag);
+        }
 
         $imageId = $this->getImageId($iconResolverContext);
         if (empty($imageId)) {
@@ -77,5 +82,16 @@ class IconResolver implements IconResolverInterface
     {
         $paymentMethodCode = $iconResolverContext->getPaymentMethodCode();
         return $this->genericGatewayUtil->getGenericFullImagePath($paymentMethodCode);
+    }
+
+    private function getCreditcardImageUrl(IconResolverContext $iconResolverContext): string|false
+    {
+        $paymentMethodCode = $iconResolverContext->getPaymentMethodCode();
+        if ($paymentMethodCode !== 'multisafepay_creditcard') {
+            return false;
+        }
+
+        $image = $this->creditCardConfigProvider->getImage();
+        return $image;
     }
 }
