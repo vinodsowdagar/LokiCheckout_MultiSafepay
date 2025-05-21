@@ -1,8 +1,10 @@
 {
     "modules": [
-        "Magento_Quote",
+        "Magento_Payment",
+        "Magento_Sales",
         "Magento_Store",
         "MultiSafepay_ConnectCore",
+        "MultiSafepay_ConnectFrontend",
         "Yireo_LokiCheckout",
         "Yireo_LokiComponents",
         "Yireo_IntegrationTestHelper"
@@ -12,6 +14,7 @@
         "loki-checkout.payment.payment-methods.multisafepay_creditcard.form",
         "loki-checkout.payment.payment-methods.multisafepay_maestro.form",
         "loki-checkout.payment.payment-methods.multisafepay_mastercard.form",
+        "loki-checkout.payment.payment-methods.multisafepay_afterpay.form",
         "loki-checkout.payment.payment-methods.multisafepay_in3.form",
         "loki-checkout.payment.payment-methods.multisafepay_in3b2b.form",
         "loki-checkout.payment.payment-methods.multisafepay_billink.form",
@@ -20,7 +23,7 @@
     "config": [],
     "tests": {
         "unit": 0,
-        "integration": 7,
-        "functional": 0
+        "integration": 6,
+        "functional": 4
     }
 }
