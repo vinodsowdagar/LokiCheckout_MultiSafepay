@@ -16,12 +16,12 @@ final class ModuleTest extends TestCase
     final public function testModule(): void
     {
         $moduleNames = [
-        'Yireo_LokiCheckoutMultiSafepay',
-        'Yireo_LokiCheckout',
-        'Magento_Quote',
-        'Magento_Store',
-        'MultiSafepay_ConnectCore',
-
+            'Yireo_LokiCheckoutMultiSafepay',
+            'Yireo_LokiCheckout',
+            'Magento_Quote',
+            'Magento_Store',
+            'MultiSafepay_ConnectCore',
+            'MultiSafepay_ConnectFrontend',
         ];
 
         foreach ($moduleNames as $moduleName) {

@@ -7,6 +7,7 @@ namespace Yireo\LokiCheckoutMultiSafepay\Test\Integration\Payment\Icon;
 use Magento\Framework\App\ObjectManager;
 use PHPUnit\Framework\TestCase;
 use Yireo\IntegrationTestHelper\Test\Integration\Traits\GetObjectManager;
+use Yireo\LokiCheckout\Payment\Icon\IconResolverContext;
 use Yireo\LokiCheckoutMultiSafepay\Payment\Icon\IconResolver;
 
 final class IconResolverTest extends TestCase
@@ -22,7 +23,10 @@ final class IconResolverTest extends TestCase
     final public function testResolve(): void
     {
         $iconResolver = $this->getInstance();
-        $actual = $iconResolver->resolve();
+        $iconResolverContext = $this->getObjectManager()->create(IconResolverContext::class, [
+            'paymentMethodCode' => 'multisafepay',
+        ]);
+        $actual = $iconResolver->resolve($iconResolverContext);
         $this->assertEquals('', $actual);
     }
 
