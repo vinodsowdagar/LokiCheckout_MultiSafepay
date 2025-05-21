@@ -16,7 +16,7 @@
         </arguments>
     </type>
 
-    <type name="Magento\Quote\Api\PaymentMethodManagementInterface">
-        <plugin name="loki_checkout_multisafepay_hide_default" type="Yireo\LokiCheckoutMultiSafepay\Plugin\HideDefaultPaymentMethod" />
+    <type name="Yireo\LokiCheckout\Component\Checkout\Billing\PaymentMethods\PaymentMethodsViewModel">
+        <plugin name="Yireo_LokiCheckoutMultiSafepay::addPaymentInstructions" type="Yireo\LokiCheckoutMultiSafepay\Plugin\AddPaymentInstructionsPlugin"/>
     </type>
 </config>
