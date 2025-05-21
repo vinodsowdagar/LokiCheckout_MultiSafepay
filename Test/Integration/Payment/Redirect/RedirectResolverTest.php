@@ -41,7 +41,6 @@ final class RedirectResolverTest extends TestCase
         Config('payment/multisafepay/active', 1),
         Config('payment/multisafepay/can_use_checkout', 1),
         Config('multisafepay/general/mode', 0),
-        Config('multisafepay/general/test_api_key', '44badbd2adf8b326094ffae8b30ab6e97b530332'),
         DataFixture(ProductFixture::class, as: 'product'),
         DataFixture(GuestCart::class, as: 'cart'),
         DataFixture(AddProductToCartFixture::class, ['cart_id' => '$cart.id$', 'product_id' => '$product.id$']),
