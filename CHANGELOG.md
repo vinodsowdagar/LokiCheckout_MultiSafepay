@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 21 May 2025
+### Fixed
+- Fix payment component was always rendered
+- Add `MultiSafepay_ConnectFrontend` as dep
+- Add integration tests
+- Add Playwright tests
+- Add support for creditcard custom image
+- Add support for gateway image
+- Put all components in a group
+
 ## [0.0.2] - 19 May 2025
 ### Fixed
 - Add Payment Components where needed
