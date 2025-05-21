@@ -27,6 +27,11 @@
     />
 
     <component
+        name="loki-checkout.payment.payment-methods.multisafepay_afterpay.form"
+        group="multisafepay-payment-components"
+    />
+
+    <component
         name="loki-checkout.payment.payment-methods.multisafepay_in3.form"
         group="multisafepay-payment-components"
     />

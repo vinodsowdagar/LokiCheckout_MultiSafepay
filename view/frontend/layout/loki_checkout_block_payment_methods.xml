@@ -18,6 +18,10 @@
             template="Yireo_LokiCheckoutMultiSafepay::checkout/payment/method/payment-component.phtml"/>
 
         <block
+            name="loki-checkout.payment.payment-methods.multisafepay_afterpay.form"
+            template="Yireo_LokiCheckoutMultiSafepay::checkout/payment/method/payment-component.phtml"/>
+
+        <block
             name="loki-checkout.payment.payment-methods.multisafepay_in3.form"
             template="Yireo_LokiCheckoutMultiSafepay::checkout/payment/method/payment-component.phtml"/>
 
