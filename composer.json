@@ -1,6 +1,6 @@
 {
     "name": "yireo/magento2-loki-checkout-multi-safepay",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "description": "N/A",
     "keywords": ["loki-payment"],
     "type": "magento2-module",
