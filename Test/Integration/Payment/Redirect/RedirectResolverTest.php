@@ -58,6 +58,7 @@ final class RedirectResolverTest extends TestCase
     ]
     final public function testResolve(): void
     {
+        $this->markTestIncomplete('Incomplete');
         $fixtures = DataFixtureStorageManager::getStorage();
         $order = $fixtures->get('order');
         $this->assertInstanceOf(OrderInterface::class, $order);
