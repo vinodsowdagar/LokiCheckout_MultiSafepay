@@ -23,11 +23,10 @@ class PaymentComponentViewModel extends CheckoutViewModel
 
         $path = 'payment/'.$paymentMethod.'/payment_type';
         if ($this->getContext()->getConfigValue($path) !== 'payment_component') {
-            return parent::isAllowRendering();
+            return false;
         }
 
-        return true;
-
+        return parent::isAllowRendering();
     }
 
     public function isValid(): bool
