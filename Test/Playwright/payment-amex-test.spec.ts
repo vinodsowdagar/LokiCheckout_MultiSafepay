@@ -2,7 +2,7 @@ import {PaymentMethod, PlaceOrderButton, SuccessPage} from '@helpers/checkout-ob
 import {setupCheckout} from '@helpers/setup-checkout';
 import {test} from '@playwright/test';
 
-import {MultiSafepay} from './helpers/multisafepay-objects';
+import {MultiSafepayPortal} from './helpers/multisafepay-objects';
 import multiSafepayConfig from './config/config';
 
 test.describe('American Express', () => {
@@ -22,8 +22,8 @@ test.describe('American Express', () => {
         const placeOrderButton = new PlaceOrderButton(page);
         await placeOrderButton.click();
 
-        const molliePortal = new MultiSafepay(page);
-        await molliePortal.expectTestPaymentPage();
+        const multiSafepayPortal = new MultiSafepayPortal(page);
+        await multiSafepayPortal.expectTestPaymentPage();
     });
 
     test('should redirect to success page', async ({page, context}) => {

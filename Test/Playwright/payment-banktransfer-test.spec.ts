@@ -2,7 +2,7 @@ import {PaymentMethod, PlaceOrderButton} from '@helpers/checkout-objects';
 import {setupCheckout} from '@helpers/setup-checkout';
 import {test} from '@playwright/test';
 
-import {MultiSafepay} from './helpers/multisafepay-objects';
+import {MultiSafepayPortal} from './helpers/multisafepay-objects';
 import multiSafepayConfig from './config/config';
 
 test.describe('Banktransfer payment test', () => {
@@ -21,7 +21,7 @@ test.describe('Banktransfer payment test', () => {
         const placeOrderButton = new PlaceOrderButton(page);
         await placeOrderButton.click();
 
-        const molliePortal = new MultiSafepay(page);
-        await molliePortal.expectTestPaymentPage();
+        const multiSafepayPortal = new MultiSafepayPortal(page);
+        await multiSafepayPortal.expectTestPaymentPage();
     });
 });

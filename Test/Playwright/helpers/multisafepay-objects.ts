@@ -1,6 +1,6 @@
 const {expect} = require(process.cwd() + '/node_modules/@playwright/test');
 
-export class MultiSafepay {
+export class MultiSafepayPortal {
     page;
     locator;
 
