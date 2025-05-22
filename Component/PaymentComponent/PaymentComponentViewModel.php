@@ -11,7 +11,7 @@ class PaymentComponentViewModel extends CheckoutViewModel
 {
     public function getJsComponentName(): ?string
     {
-        return 'LokiCheckoutPaymentComponent';
+        return 'LokiCheckoutMultiSafepayPaymentComponent';
     }
 
     public function isAllowRendering(): bool
