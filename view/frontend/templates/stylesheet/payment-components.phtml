@@ -1,1 +1,11 @@
-<link rel="stylesheet" href="https://testpay.multisafepay.com/sdk/components/v2/components.css">
+<?php
+declare(strict_types=1);
+
+use Yireo\LokiCheckoutMultiSafepay\ViewModel\AssetConfig;
+use Yireo\LokiComponents\Factory\ViewModelFactory;
+
+/** @var ViewModelFactory $viewModelFactory */
+/** @var AssetConfig $assetConfig */
+$assetConfig = $viewModelFactory->create(AssetConfig::class);
+?>
+<link rel="stylesheet" href="<?= $assetConfig->getComponentCssUrl() ?>">
