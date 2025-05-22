@@ -1,8 +1,20 @@
 const {expect} = require(process.cwd() + '/node_modules/@playwright/test');
 
-export class MultiSafepayPortal {
+export class MultiSafepayPaymentComponent {
     page;
     locator;
+
+    constructor(page) {
+        this.page = page;
+    }
+
+    field(iframeCount) {
+        return this.page.locator(':nth-match(iframe, ' + iframeCount + ')').contentFrame().locator('input');
+    }
+}
+
+export class MultiSafepayPortal {
+    page;
 
     constructor(page) {
         this.page = page;
