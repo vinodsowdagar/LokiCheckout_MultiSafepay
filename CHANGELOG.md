@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 22 May 2025
+### Fixed
+- Switch test vs live mode for component URLs
+- Implement MultiSafepayPaymentComponent object in Playwright
+- Rename MultiSafepay object to MultiSafepayPortal
+- Rename LokiCheckoutPaymentComponent to LokiCheckoutMultiSafepayPaymentComponent
+
 ## [1.0.0] - 21 May 2025
 ### Fixed
 - Fix payment component was always rendered
