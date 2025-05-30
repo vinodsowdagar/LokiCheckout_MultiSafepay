@@ -1,5 +1,5 @@
-import {PaymentMethod, PlaceOrderButton} from '@helpers/checkout-objects';
-import {setupCheckout} from '@helpers/setup-checkout';
+import {PaymentMethod, PlaceOrderButton} from '@loki/checkout-objects';
+import {setupCheckout} from '@loki/setup-checkout';
 import {test} from '@playwright/test';
 
 import {MultiSafepayPortal} from './helpers/multisafepay-objects';
