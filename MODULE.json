@@ -24,6 +24,6 @@
     "tests": {
         "unit": 0,
         "integration": 6,
-        "functional": 4
+        "functional": 5
     }
 }
