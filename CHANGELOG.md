@@ -6,11 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.2] - 18 June 2025
+## [1.0.2] - 19 June 2025
 ### Fixed
 - Use Loki test-case in Playwright to detect JS errors automatically
 - Rewrite @helpers to @loki in Playwright tests
 - Draft of ApplePay behaviour
+- Fix malfunctioning integration test
 
 ## [1.0.1] - 22 May 2025
 ### Fixed
