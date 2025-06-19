@@ -12,9 +12,12 @@ use Magento\Checkout\Test\Fixture\SetGuestEmail as SetGuestEmailFixture;
 use Magento\Checkout\Test\Fixture\SetPaymentMethod as SetPaymentMethodFixture;
 use Magento\Checkout\Test\Fixture\SetShippingAddress as SetShippingAddressFixture;
 use Magento\Framework\App\ObjectManager;
+use Magento\Payment\Model\Method\Adapter as PaymentMethod;
 use Magento\Quote\Test\Fixture\AddProductToCart as AddProductToCartFixture;
 use Magento\Quote\Test\Fixture\GuestCart;
 use Magento\Sales\Api\Data\OrderInterface;
+use Magento\Sales\Api\OrderRepositoryInterface;
+use Magento\Sales\Model\Order\Payment\Info as PaymentInfo;
 use Magento\TestFramework\Fixture\AppArea;
 use Magento\TestFramework\Fixture\Config;
 use Magento\TestFramework\Fixture\DataFixture;
@@ -23,9 +26,9 @@ use PHPUnit\Framework\TestCase;
 use Yireo\IntegrationTestHelper\Test\Integration\Traits\GetObjectManager;
 use Yireo\LokiCheckout\Step\FinalStep\RedirectContext;
 use Yireo\LokiCheckoutMultiSafepay\Payment\Redirect\RedirectResolver;
+use Magento\Framework\Api\SearchCriteriaBuilder;
 
-
-final class RedirectResolverTest extends TestCase
+class RedirectResolverTest extends TestCase
 {
     use GetObjectManager;
 
@@ -35,41 +38,25 @@ final class RedirectResolverTest extends TestCase
         $this->assertInstanceOf(RedirectResolver::class, $redirectResolver);
     }
 
-    #[
-        AppArea('frontend'),
-        Config('payment/multisafepay/active', 1),
-        Config('payment/multisafepay/can_use_checkout', 1),
-        Config('multisafepay/general/mode', 0),
-        DataFixture(ProductFixture::class, as: 'product'),
-        DataFixture(GuestCart::class, as: 'cart'),
-        DataFixture(AddProductToCartFixture::class, ['cart_id' => '$cart.id$', 'product_id' => '$product.id$']),
-        DataFixture(SetBillingAddressFixture::class, ['cart_id' => '$cart.id$']),
-        DataFixture(SetShippingAddressFixture::class, ['cart_id' => '$cart.id$']),
-        DataFixture(SetGuestEmailFixture::class, ['cart_id' => '$cart.id$']),
-        DataFixture(SetDeliveryMethodFixture::class, ['cart_id' => '$cart.id$']),
-        DataFixture(SetPaymentMethodFixture::class, [
-            'cart_id' => '$cart.id$',
-            'method' => [
-                'method' => 'multisafepay_banking',
-            ],
-        ]),
-        DataFixture(PlaceOrderFixture::class, ['cart_id' => '$cart.id$'], 'order'),
-    ]
-    final public function testResolve(): void
+    public function testResolve(): void
     {
-        $this->markTestIncomplete('Incomplete');
-        $fixtures = DataFixtureStorageManager::getStorage();
-        $order = $fixtures->get('order');
-        $this->assertInstanceOf(OrderInterface::class, $order);
+        $payment = $this->createMock(PaymentInfo::class);
+        $payment->method('getAdditionalInformation')->willReturn('foobar');
+
+        $order = $this->createMock(OrderInterface::class);
+        $order->method('getPayment')->willReturn($payment);
 
         $redirectResolver = $this->getInstance();
-        $redirectContext = $this->getObjectManager()->get(RedirectContext::class);
 
-        $order = $redirectContext->getOrder();
-        $this->assertInstanceOf(OrderInterface::class, $order);
+        $paymentMethod = $this->createMock(PaymentMethod::class);
+        $paymentMethod->method('getCode')->willReturn('multisafepay_banktransfer');
+
+        $redirectContext = $this->createMock(RedirectContext::class);
+        $redirectContext->method('getOrder')->willReturn($order);
+        $redirectContext->method('getPaymentMethod')->willReturn($paymentMethod);
 
         $actual = $redirectResolver->resolve($redirectContext);
-        $this->assertNotEmpty($actual);
+        $this->assertEquals('foobar', $actual);
     }
 
     private function getInstance(): RedirectResolver

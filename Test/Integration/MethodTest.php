@@ -10,7 +10,6 @@ use Magento\Store\Model\StoreManagerInterface;
 use PHPUnit\Framework\TestCase;
 use Yireo\IntegrationTestHelper\Test\Integration\Traits\GetObjectManager;
 
-
 final class MethodTest extends TestCase
 {
     use GetObjectManager;
