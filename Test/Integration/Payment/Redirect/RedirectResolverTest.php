@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutMultiSafepay\Test\Integration\Payment\Redirect;
+namespace LokiCheckout\MultiSafepay\Test\Integration\Payment\Redirect;
 
 use Magento\Catalog\Test\Fixture\Product as ProductFixture;
 use Magento\Checkout\Test\Fixture\PlaceOrder as PlaceOrderFixture;
@@ -24,8 +24,8 @@ use Magento\TestFramework\Fixture\DataFixture;
 use Magento\TestFramework\Fixture\DataFixtureStorageManager;
 use PHPUnit\Framework\TestCase;
 use Yireo\IntegrationTestHelper\Test\Integration\Traits\GetObjectManager;
-use Yireo\LokiCheckout\Step\FinalStep\RedirectContext;
-use Yireo\LokiCheckoutMultiSafepay\Payment\Redirect\RedirectResolver;
+use LokiCheckout\Core\Step\FinalStep\RedirectContext;
+use LokiCheckout\MultiSafepay\Payment\Redirect\RedirectResolver;
 use Magento\Framework\Api\SearchCriteriaBuilder;
 
 class RedirectResolverTest extends TestCase

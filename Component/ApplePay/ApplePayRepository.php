@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutMultiSafepay\Component\ApplePay;
+namespace LokiCheckout\MultiSafepay\Component\ApplePay;
 
-use Yireo\LokiCheckout\Component\Base\Payment\ApplePay\ApplePayRepository as OriginalRepository;
-use Yireo\LokiCheckout\Payment\ApplePayRequestFactory;
+use LokiCheckout\Core\Component\Base\Payment\ApplePay\ApplePayRepository as OriginalRepository;
+use LokiCheckout\Core\Payment\ApplePayRequestFactory;
 
 class ApplePayRepository extends OriginalRepository
 {

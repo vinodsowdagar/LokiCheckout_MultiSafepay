@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent;
+namespace LokiCheckout\MultiSafepay\Component\PaymentComponent;
 
-use Yireo\LokiComponents\Component\ComponentRepository;
+use Loki\Components\Component\ComponentRepository;
 
 /**
  * @method PaymentComponentContext getContext()

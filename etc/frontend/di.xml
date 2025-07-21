@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Yireo\LokiCheckout\Payment\Icon\IconResolverListing">
+    <type name="LokiCheckout\Core\Payment\Icon\IconResolverListing">
         <arguments>
             <argument name="iconResolvers" xsi:type="array">
-                <item name="multisafepay" xsi:type="object">Yireo\LokiCheckoutMultiSafepay\Payment\Icon\IconResolver</item>
+                <item name="multisafepay" xsi:type="object">LokiCheckout\MultiSafepay\Payment\Icon\IconResolver</item>
             </argument>
         </arguments>
     </type>
 
-    <type name="Yireo\LokiCheckout\Payment\Redirect\RedirectResolverListing">
+    <type name="LokiCheckout\Core\Payment\Redirect\RedirectResolverListing">
         <arguments>
             <argument name="redirectResolvers" xsi:type="array">
-                <item name="multisafepay" xsi:type="object">Yireo\LokiCheckoutMultiSafepay\Payment\Redirect\RedirectResolver</item>
+                <item name="multisafepay" xsi:type="object">LokiCheckout\MultiSafepay\Payment\Redirect\RedirectResolver</item>
             </argument>
         </arguments>
     </type>
 
-    <type name="Yireo\LokiCheckout\Component\Checkout\Billing\PaymentMethods\PaymentMethodsViewModel">
-        <plugin name="Yireo_LokiCheckoutMultiSafepay::addPaymentInstructions" type="Yireo\LokiCheckoutMultiSafepay\Plugin\AddPaymentInstructionsPlugin"/>
+    <type name="LokiCheckout\Core\Component\Checkout\Billing\PaymentMethods\PaymentMethodsViewModel">
+        <plugin name="LokiCheckout_MultiSafepay::addPaymentInstructions" type="LokiCheckout\MultiSafepay\Plugin\AddPaymentInstructionsPlugin"/>
     </type>
 </config>

@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutMultiSafepay\Component\PaymentComponent;
+namespace LokiCheckout\MultiSafepay\Component\PaymentComponent;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
-use Yireo\LokiCheckout\Util\Component\StepProvider;
-use Yireo\LokiCheckout\ViewModel\CheckoutState;
-use Yireo\LokiCheckout\ViewModel\CurrentStore;
-use Yireo\LokiComponents\Component\ComponentContextInterface;
+use LokiCheckout\Core\Util\Component\StepProvider;
+use LokiCheckout\Core\ViewModel\CheckoutState;
+use LokiCheckout\Core\ViewModel\CurrentStore;
+use Loki\Components\Component\ComponentContextInterface;
 use MultiSafepay\ConnectCore\Util\ApiTokenUtil;
 use MultiSafepay\ConnectCore\Config\Config;
 

@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutMultiSafepay\Payment\Icon;
+namespace LokiCheckout\MultiSafepay\Payment\Icon;
 
 use Magento\Framework\Module\Manager as ModuleManager;
 use MultiSafepay\ConnectCore\Model\Ui\Gateway\CreditCardConfigProvider;
 use MultiSafepay\ConnectCore\Util\GenericGatewayUtil;
-use Yireo\LokiCheckout\Payment\Icon\IconResolverContext;
-use Yireo\LokiCheckout\Payment\Icon\IconResolverInterface;
-use Yireo\LokiCheckout\ViewModel\CheckoutState;
+use LokiCheckout\Core\Payment\Icon\IconResolverContext;
+use LokiCheckout\Core\Payment\Icon\IconResolverInterface;
+use LokiCheckout\Core\ViewModel\CheckoutState;
 
 class IconResolver implements IconResolverInterface
 {

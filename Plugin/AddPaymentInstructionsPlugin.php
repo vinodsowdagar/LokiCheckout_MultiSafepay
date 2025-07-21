@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutMultiSafepay\Plugin;
+namespace LokiCheckout\MultiSafepay\Plugin;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
-use Yireo\LokiCheckout\Component\Checkout\Billing\PaymentMethods\PaymentMethodsViewModel;
+use LokiCheckout\Core\Component\Checkout\Billing\PaymentMethods\PaymentMethodsViewModel;
 
 class AddPaymentInstructionsPlugin
 {

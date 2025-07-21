@@ -5,8 +5,8 @@
         "Magento_Store",
         "MultiSafepay_ConnectCore",
         "MultiSafepay_ConnectFrontend",
-        "Yireo_LokiCheckout",
-        "Yireo_LokiComponents",
+        "LokiCheckout_Core",
+        "Loki_Components",
         "Yireo_IntegrationTestHelper"
     ],
     "components": [

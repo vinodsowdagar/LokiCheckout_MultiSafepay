@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutMultiSafepay\ViewModel;
+namespace LokiCheckout\MultiSafepay\ViewModel;
 
 use Magento\Framework\View\Element\Block\ArgumentInterface;
 use MultiSafepay\ConnectCore\Config\Config;

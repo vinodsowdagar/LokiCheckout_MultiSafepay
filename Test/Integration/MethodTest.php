@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutMultiSafepay\Test\Integration;
+namespace LokiCheckout\MultiSafepay\Test\Integration;
 
 use Magento\Payment\Helper\Data;
 use Magento\Payment\Model\PaymentMethodList;

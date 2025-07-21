@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Yireo\LokiCheckoutMultiSafepay\Component\ApplePay;
+namespace LokiCheckout\MultiSafepay\Component\ApplePay;
 
-use Yireo\LokiCheckout\Component\Base\Payment\ApplePay\ApplePayViewModel as ParentViewModel;
-use Yireo\LokiCheckout\Payment\ApplePayRequest;
-use Yireo\LokiCheckout\Payment\ApplePayRequestFactory;
+use LokiCheckout\Core\Component\Base\Payment\ApplePay\ApplePayViewModel as ParentViewModel;
+use LokiCheckout\Core\Payment\ApplePayRequest;
+use LokiCheckout\Core\Payment\ApplePayRequestFactory;
 
 class ApplePayViewModel extends ParentViewModel
 {
