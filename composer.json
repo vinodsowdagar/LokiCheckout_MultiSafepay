@@ -1,6 +1,6 @@
 {
     "name": "loki-checkout/magento2-multi-safepay",
-    "version": "1.0.2",
+    "version": "2.0.0",
     "description": "N/A",
     "keywords": ["loki-payment"],
     "type": "magento2-module",
@@ -10,10 +10,12 @@
         "magento/module-sales": "^103.0",
         "magento/module-store": "^101.0",
         "multisafepay/magento2-core": "^3.9",
-        "yireo/magento2-integration-test-helper": "~0.0",
         "loki/magento2-components": "^2.0",
         "loki-checkout/magento2-core": "^2.0",
         "ext-pcre": "*"
+    },
+    "require-dev": {
+        "yireo/magento2-integration-test-helper": "~0.0"
     },
     "suggest": {
         "multisafepay/magento2-frontend": "You probably want the frontend module",

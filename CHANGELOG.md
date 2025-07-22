@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 22 July 2025
+### Fixed
+- Bump loki/magento2-components to major 2.0
+- Bump `LokiCheckout_Core` to 2.0.0
+- Rename PHP namespace from `Yireo_Loki*` to `Loki*`
+- Rename composer package from `yireo/magento2-loki*` to `loki/magento2*`
+
 ## [1.0.2] - 19 June 2025
 ### Fixed
 - Use Loki test-case in Playwright to detect JS errors automatically
