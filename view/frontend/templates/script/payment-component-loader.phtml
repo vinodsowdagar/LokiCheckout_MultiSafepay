@@ -8,4 +8,5 @@ use Loki\Components\Factory\ViewModelFactory;
 /** @var AssetConfig $assetConfig */
 $assetConfig = $viewModelFactory->create(AssetConfig::class);
 ?>
-<script src="<?= $assetConfig->getComponentJsUrl() ?>"></script>
+<script src="<?= /* @noEscape */
+$assetConfig->getComponentJsUrl() ?>"></script>
