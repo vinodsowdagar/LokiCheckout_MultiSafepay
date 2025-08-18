@@ -10,7 +10,6 @@ use Loki\Components\Util\Block\CssClass;
 /** @var CssClass $css */
 $gatewayCode = $viewModel->getGatewayCode();
 ?>
-<div class="<?= /* @noEscape */
-$css('') ?>" data-gateway-id="<?= $escaper->escapeHtml($gatewayCode) ?>">
+<div class="<?= /* @noEscape */ $css('') ?>" data-gateway-id="<?= $escaper->escapeHtml($gatewayCode) ?>">
     <div id="<?= $escaper->escapeHtml($viewModel->getElementId()) ?>-container"></div>
 </div>

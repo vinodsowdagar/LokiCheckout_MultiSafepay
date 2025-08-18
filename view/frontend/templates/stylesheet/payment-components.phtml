@@ -8,5 +8,4 @@ use Loki\Components\Factory\ViewModelFactory;
 /** @var AssetConfig $assetConfig */
 $assetConfig = $viewModelFactory->create(AssetConfig::class);
 ?>
-<link rel="stylesheet" href="<?= /* @noEscape */
-$assetConfig->getComponentCssUrl() ?>">
+<link rel="stylesheet" href="<?= /* @noEscape */ $assetConfig->getComponentCssUrl() ?>">
