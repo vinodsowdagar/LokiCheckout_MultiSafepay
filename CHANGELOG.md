@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.4] - 21 August 2025
+### Fixed
+- Add dependency with loki/magento2-css-utils
+- Fix duplicate import
+- Replace LokiComponentsUtilBlockCssClass with LokiCssUtilsUtilCssClass
+- Declare used PHP namespaces
+- Document latest version of template
+- Add missing strict_types declaration
+
 ## [2.0.3] - 18 August 2025
 ### Fixed
 - Lower requirements to PHP 8.1
