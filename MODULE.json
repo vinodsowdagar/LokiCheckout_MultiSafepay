@@ -7,6 +7,7 @@
         "MultiSafepay_ConnectFrontend",
         "LokiCheckout_Core",
         "Loki_Components",
+        "Loki_FieldComponents",
         "Yireo_IntegrationTestHelper"
     ],
     "components": [
