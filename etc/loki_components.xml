@@ -7,47 +7,47 @@
     />
 
     <component
-        name="loki-checkout.payment.payment-methods.multisafepay_amex.form"
+        name="loki-checkout.payment.methods.multisafepay_amex.form"
         group="multisafepay-payment-components"
     />
 
     <component
-        name="loki-checkout.payment.payment-methods.multisafepay_creditcard.form"
+        name="loki-checkout.payment.methods.multisafepay_creditcard.form"
         group="multisafepay-payment-components"
     />
 
     <component
-        name="loki-checkout.payment.payment-methods.multisafepay_maestro.form"
+        name="loki-checkout.payment.methods.multisafepay_maestro.form"
         group="multisafepay-payment-components"
     />
 
     <component
-        name="loki-checkout.payment.payment-methods.multisafepay_mastercard.form"
+        name="loki-checkout.payment.methods.multisafepay_mastercard.form"
         group="multisafepay-payment-components"
     />
 
     <component
-        name="loki-checkout.payment.payment-methods.multisafepay_afterpay.form"
+        name="loki-checkout.payment.methods.multisafepay_afterpay.form"
         group="multisafepay-payment-components"
     />
 
     <component
-        name="loki-checkout.payment.payment-methods.multisafepay_in3.form"
+        name="loki-checkout.payment.methods.multisafepay_in3.form"
         group="multisafepay-payment-components"
     />
 
     <component
-        name="loki-checkout.payment.payment-methods.multisafepay_in3b2b.form"
+        name="loki-checkout.payment.methods.multisafepay_in3b2b.form"
         group="multisafepay-payment-components"
     />
 
     <component
-        name="loki-checkout.payment.payment-methods.multisafepay_billink.form"
+        name="loki-checkout.payment.methods.multisafepay_billink.form"
         group="multisafepay-payment-components"
     />
 
     <component
-        name="loki-checkout.payment.payment-methods.multisafepay_einvoicing.form"
+        name="loki-checkout.payment.methods.multisafepay_einvoicing.form"
         group="multisafepay-payment-components"
     />
 </components>

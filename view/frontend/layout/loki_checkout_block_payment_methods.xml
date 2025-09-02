@@ -2,39 +2,39 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
     <body>
         <block
-            name="loki-checkout.payment.payment-methods.multisafepay_amex.form"
+            name="loki-checkout.payment.methods.multisafepay_amex.form"
             template="LokiCheckout_MultiSafepay::checkout/payment/method/payment-component.phtml"/>
 
         <block
-            name="loki-checkout.payment.payment-methods.multisafepay_creditcard.form"
+            name="loki-checkout.payment.methods.multisafepay_creditcard.form"
             template="LokiCheckout_MultiSafepay::checkout/payment/method/payment-component.phtml"/>
 
         <block
-            name="loki-checkout.payment.payment-methods.multisafepay_maestro.form"
+            name="loki-checkout.payment.methods.multisafepay_maestro.form"
             template="LokiCheckout_MultiSafepay::checkout/payment/method/payment-component.phtml"/>
 
         <block
-            name="loki-checkout.payment.payment-methods.multisafepay_mastercard.form"
+            name="loki-checkout.payment.methods.multisafepay_mastercard.form"
             template="LokiCheckout_MultiSafepay::checkout/payment/method/payment-component.phtml"/>
 
         <block
-            name="loki-checkout.payment.payment-methods.multisafepay_afterpay.form"
+            name="loki-checkout.payment.methods.multisafepay_afterpay.form"
             template="LokiCheckout_MultiSafepay::checkout/payment/method/payment-component.phtml"/>
 
         <block
-            name="loki-checkout.payment.payment-methods.multisafepay_in3.form"
+            name="loki-checkout.payment.methods.multisafepay_in3.form"
             template="LokiCheckout_MultiSafepay::checkout/payment/method/payment-component.phtml"/>
 
         <block
-            name="loki-checkout.payment.payment-methods.multisafepay_in3b2b.form"
+            name="loki-checkout.payment.methods.multisafepay_in3b2b.form"
             template="LokiCheckout_MultiSafepay::checkout/payment/method/payment-component.phtml"/>
 
         <block
-            name="loki-checkout.payment.payment-methods.multisafepay_billink.form"
+            name="loki-checkout.payment.methods.multisafepay_billink.form"
             template="LokiCheckout_MultiSafepay::checkout/payment/method/payment-component.phtml"/>
 
         <block
-            name="loki-checkout.payment.payment-methods.multisafepay_einvoicing.form"
+            name="loki-checkout.payment.methods.multisafepay_einvoicing.form"
             template="LokiCheckout_MultiSafepay::checkout/payment/method/payment-component.phtml"/>
     </body>
 </page>
