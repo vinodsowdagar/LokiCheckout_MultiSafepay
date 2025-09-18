@@ -9,7 +9,7 @@
             <block template="LokiCheckout_MultiSafepay::script/payment-component-loader.phtml"/>
         </referenceContainer>
 
-        <referenceContainer name="loki.components">
+        <referenceContainer name="loki-components">
             <block template="LokiCheckout_MultiSafepay::script/component/payment-component.phtml"/>
         </referenceContainer>
     </body>
