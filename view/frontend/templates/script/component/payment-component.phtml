@@ -48,7 +48,7 @@ use Magento\Framework\View\Element\Template;
                     container: '#' + this.$root.id + '-container',
                     gateway: this.$root.getAttribute('data-gateway-id'),
                     onLoad() {
-                        const component = Alpine.store('components').getComponentByElementId(this.elementId);
+                        const component = Alpine.store('LokiComponents').getComponentByElementId(this.elementId);
                         component.setValid(false);
                     },
                     onValidation: (state) => {
@@ -56,7 +56,7 @@ use Magento\Framework\View\Element\Template;
                             return;
                         }
 
-                        const component = Alpine.store('components').getComponentByElementId(this.elementId);
+                        const component = Alpine.store('LokiComponents').getComponentByElementId(this.elementId);
                         if (PaymentComponent.hasErrors()) {
                             component.setValid(false);
                             return false;
@@ -71,10 +71,10 @@ use Magento\Framework\View\Element\Template;
 
                 if (PaymentComponent.hasErrors()) {
                     PaymentComponent.getErrors().errors.forEach(error => {
-                        Alpine.store('components').get('LokiComponentsGlobalMessages').addError(error.message);
+                        Alpine.store('LokiComponents').get('LokiComponentsGlobalMessages').addError(error.message);
                     });
 
-                    const component = Alpine.store('components').getComponentByElementId(this.elementId);
+                    const component = Alpine.store('LokiComponents').getComponentByElementId(this.elementId);
                     component.setValid(false);
 
                     return false;
