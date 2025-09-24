@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.8] - 24 September 2025
+### Fixed
+- Change containers into blocks to allow for caching
+- Rename Alpine store checkout to LokiCheckout, components to LokiComponents
+- Rename loki-components container to loki.components
+
 ## [2.0.7] - 16 September 2025
 ### Fixed
 - Copy generic CI/CD files
