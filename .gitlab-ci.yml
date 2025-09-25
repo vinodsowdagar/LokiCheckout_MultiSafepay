@@ -30,8 +30,8 @@ magento-unit-tests:
     - test -d $CI_PROJECT_DIR/Test/Unit/ || exit 0
     - source .module.ini
     - cd /tmp/magento
-    - test -n $CI_JOB_TOKEN && composer config gitlab-token.gitlab.yireo.com gitlab-ci-token $CI_JOB_TOKEN
-    - test -n $GITLAB_TOKEN && composer config gitlab-token.gitlab.yireo.com $GITLAB_TOKEN
+    - echo $CI_JOB_TOKEN
+    - composer config gitlab-token.gitlab.yireo.com gitlab-ci-token $CI_JOB_TOKEN
     - composer config repositories.loki-checkout composer https://gitlab.yireo.com/api/v4/group/loki-checkout/-/packages/composer/packages.json
     - composer config repositories.local-source path $CI_PROJECT_DIR
     - composer require --prefer-source -- $COMPOSER_NAME:@dev
@@ -48,7 +48,8 @@ magento-integration-tests:
     - test -d Test/Integration/ || exit 0
     - source .module.ini
     - cd /tmp/magento
-    - composer config gitlab-token.gitlab.yireo.com gitlab-ci-token $CI_JOB_TOKEN
+    - echo $CI_JOB_TOKEN
+    - composer config --global --auth gitlab-token.gitlab.yireo.com $CI_JOB_TOKEN
     - composer config repositories.loki-checkout composer https://gitlab.yireo.com/api/v4/group/loki-checkout/-/packages/composer/packages.json
     - composer config repositories.local-source path $CI_PROJECT_DIR
     - composer require --prefer-source -- $COMPOSER_NAME:@dev yireo/magento2-integration-test-helper
