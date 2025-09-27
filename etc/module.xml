@@ -2,14 +2,14 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="LokiCheckout_MultiSafepay">
         <sequence>
+            <module name="LokiCheckout_Core"/>
+            <module name="Loki_Components"/>
+            <module name="Loki_FieldComponents"/>
             <module name="Magento_Payment"/>
             <module name="Magento_Sales"/>
             <module name="Magento_Store"/>
             <module name="MultiSafepay_ConnectCore"/>
             <module name="MultiSafepay_ConnectFrontend"/>
-            <module name="LokiCheckout_Core"/>
-            <module name="Loki_Components"/>
-            <module name="Loki_FieldComponents"/>
             <module name="Yireo_IntegrationTestHelper"/>
         </sequence>
     </module>
