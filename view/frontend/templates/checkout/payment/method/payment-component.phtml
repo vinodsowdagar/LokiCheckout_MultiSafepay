@@ -14,6 +14,6 @@ use LokiCheckout\MultiSafepay\Component\PaymentComponent\PaymentComponentViewMod
 /** @var CssClass $css */
 $gatewayCode = $viewModel->getGatewayCode();
 ?>
-<div class="<?= /* @noEscape */ $css('') ?>" data-gateway-id="<?= $escaper->escapeHtml($gatewayCode) ?>">
+<div class="<?= $escaper->escapeHtmlAttr($css('')) ?>" data-gateway-id="<?= $escaper->escapeHtml($gatewayCode) ?>">
     <div id="<?= $escaper->escapeHtml($viewModel->getElementId()) ?>-container"></div>
 </div>
