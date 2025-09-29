@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.9] - 29 September 2025
+### Fixed
+- Sort entries of module.xml file
+- Sort dependencies of composer.json
+- Copy generic CI/CD files
+- Add gitignore file
+
 ## [2.0.8] - 24 September 2025
 ### Fixed
 - Change containers into blocks to allow for caching
