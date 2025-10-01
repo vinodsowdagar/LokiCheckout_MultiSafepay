@@ -2,15 +2,24 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
     <body>
         <referenceBlock name="head.additional">
-            <block template="LokiCheckout_MultiSafepay::stylesheet/payment-components.phtml"/>
+            <block
+                name="loki-checkout-multisafepay.stylesheet.payment-components"
+                template="LokiCheckout_MultiSafepay::stylesheet/payment-components.phtml"
+            />
         </referenceBlock>
 
         <referenceContainer name="before.body.end">
-            <block template="LokiCheckout_MultiSafepay::script/payment-component-loader.phtml"/>
+            <block
+                name="loki-checkout-multisafepay.script.payment-component-loader"
+                template="LokiCheckout_MultiSafepay::script/payment-component-loader.phtml"
+            />
         </referenceContainer>
 
         <referenceBlock name="loki.script.component">
-            <block template="LokiCheckout_MultiSafepay::script/component/payment-component.phtml"/>
+            <block
+                name="loki.script.component.multisafepay-payment-component"
+                template="LokiCheckout_MultiSafepay::script/component/payment-component.phtml"
+            />
         </referenceBlock>
     </body>
 </page>
