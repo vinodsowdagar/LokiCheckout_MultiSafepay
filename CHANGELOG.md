@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.10] - 01 October 2025
+### Fixed
+- Greatly simplify image rendering
+- Add proper XML layout names to all block
+
 ## [2.0.9] - 29 September 2025
 ### Fixed
 - Sort entries of module.xml file
