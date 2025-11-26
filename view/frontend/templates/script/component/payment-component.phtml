@@ -49,7 +49,9 @@ use Magento\Framework\View\Element\Template;
                     gateway: this.$root.getAttribute('data-gateway-id'),
                     onLoad() {
                         const component = Alpine.store('LokiComponents').getComponentByElementId(this.elementId);
-                        component.setValid(false);
+                        if (component) {
+                            component.setValid(false);
+                        }
                     },
                     onValidation: (state) => {
                         if (true !== state.valid) {
@@ -57,6 +59,10 @@ use Magento\Framework\View\Element\Template;
                         }
 
                         const component = Alpine.store('LokiComponents').getComponentByElementId(this.elementId);
+                        if (!component) {
+                            return;
+                        }
+
                         if (PaymentComponent.hasErrors()) {
                             component.setValid(false);
                             return false;
