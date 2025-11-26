@@ -45,7 +45,7 @@ use Magento\Framework\View\Element\Template;
 
                 PaymentComponent.init('payment', {
                     elementId: this.$root.id,
-                    container: '#' + this.$root.id + '-container',
+                    container: '#' + this.$refs.container.id,
                     gateway: this.$root.getAttribute('data-gateway-id'),
                     onLoad() {
                         const component = Alpine.store('LokiComponents').getComponentByElementId(this.elementId);

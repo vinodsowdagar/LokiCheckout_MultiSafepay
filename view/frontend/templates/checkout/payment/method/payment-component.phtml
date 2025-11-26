@@ -1,13 +1,12 @@
 <?php
 declare(strict_types=1);
 
-/** @version 2.0.11 */
-
 use Loki\CssUtils\Util\CssClass;
 use Magento\Framework\Escaper;
 use Magento\Framework\View\Element\Template;
 use LokiCheckout\MultiSafepay\Component\PaymentComponent\PaymentComponentViewModel;
 
+/** @version 2.0.11 */
 /** @var Escaper $escaper */
 /** @var PaymentComponentViewModel $viewModel */
 /** @var Template $block */
@@ -15,5 +14,5 @@ use LokiCheckout\MultiSafepay\Component\PaymentComponent\PaymentComponentViewMod
 $gatewayCode = $viewModel->getGatewayCode();
 ?>
 <div class="<?= $escaper->escapeHtml($css('')) ?>" data-gateway-id="<?= $escaper->escapeHtml($gatewayCode) ?>">
-    <div id="<?= $escaper->escapeHtml($viewModel->getElementId()) ?>-container"></div>
+    <div id="<?= $escaper->escapeHtml($viewModel->getElementId()) ?>-container" x-ref="container"></div>
 </div>
