@@ -44,11 +44,12 @@ use Magento\Framework\View\Element\Template;
                 });
 
                 PaymentComponent.init('payment', {
+                    componentName: this.id,
                     elementId: this.$root.id,
                     container: '#' + this.$refs.container.id,
                     gateway: this.$root.getAttribute('data-gateway-id'),
                     onLoad() {
-                        const component = Alpine.store('LokiComponents').getComponentByElementId(this.elementId);
+                        const component = Alpine.store('LokiComponents').get(this.componentName);
                         if (component) {
                             component.setValid(false);
                         }
@@ -58,7 +59,7 @@ use Magento\Framework\View\Element\Template;
                             return;
                         }
 
-                        const component = Alpine.store('LokiComponents').getComponentByElementId(this.elementId);
+                        const component = Alpine.store('LokiComponents').get(this.componentName);
                         if (!component) {
                             return;
                         }
@@ -80,7 +81,7 @@ use Magento\Framework\View\Element\Template;
                         Alpine.store('LokiComponents').get('LokiComponentsGlobalMessages').addError(error.message);
                     });
 
-                    const component = Alpine.store('LokiComponents').getComponentByElementId(this.elementId);
+                    const component = Alpine.store('LokiComponents').get(this.componentName);
                     component.setValid(false);
 
                     return false;
