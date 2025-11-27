@@ -3,6 +3,7 @@
     <module name="LokiCheckout_MultiSafepay">
         <sequence>
             <module name="LokiCheckout_Core"/>
+            <module name="Loki_CssUtils"/>
             <module name="Loki_Components"/>
             <module name="Loki_FieldComponents"/>
             <module name="Magento_Payment"/>
