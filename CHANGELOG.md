@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.12] - 27 November 2025
+### Fixed
+- Get component from Alpine store by name, not element ID
+- Fix potential JS error when component is not in Alpine store
+- Fix error on container not found with payment components
+- Update composer keywords
+- Update composer keywords
+- Update composer keywords
+
 ## [2.0.11] - 22 October 2025
 ### Fixed
 - Do not escape `$css()` with `escapeHtmlAttr()` but `escapeHtml()`
