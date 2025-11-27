@@ -2,6 +2,7 @@
     "sequence": [
         "LokiCheckout_Core",
         "Loki_Components",
+        "Loki_CssUtils",
         "Loki_FieldComponents",
         "Magento_Payment",
         "Magento_Sales",
@@ -57,7 +58,5 @@
         "unit": 0,
         "integration": 6,
         "functional": 5
-    },
-    "phpcs_severity": "8",
-    "phpstan_level": "1"
+    }
 }
